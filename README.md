@@ -5,11 +5,16 @@ Generic Singleton Class Loader
 
 You should have an autloader configured, something like this:
 function afs_autoloader($class) {
+
         if (file_exists('/path/'.$class . '.php')) {
+        
                 include '/path/'.$class . '.php';
+                
         }
+        
 
         return true;
+        
 }
 
 spl_autoload_register('afs_autoloader');
